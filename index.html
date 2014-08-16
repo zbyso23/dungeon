@@ -1,8 +1,46 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Dungeon Crawl WegGL remake (Three.js)</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel=stylesheet href="css/style.css"/>
 	</head>
 	<body>
-		<p>takhle to zacina :)</p>
+		<script src="js/three/three.min.js"></script>
+		<script src="js/Detector.js"></script>
+		<script src="js/stats.js"></script>
+		<script src="js/OrbitControls.js"></script>
+
+		<script src="js/three/threex.keyboardstate.js"></script>
+		<script src="js/three/threex.fullscreen.js"></script>
+		<script src="js/three/threex.windowresize.js"></script>
+
+		<script src="js/game/game.js"></script>
+		<script src="js/game/game.utils.js"></script>
+		<script src="js/game/game.html.js"></script>
+		<script src="js/game/game.htmlgen.js"></script>
+		
+
+		<script>
+		window.onload = function()
+		{
+			try
+			{
+				game.run();
+			}
+			catch(e)
+			{
+				if(e instanceof gameException)
+				{
+					console.log('gameException: '+e.message);
+				}
+				else
+				{
+					console.log(e);
+				}
+			}
+		}
+		</script>
 	</body>
 </html>
